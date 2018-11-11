@@ -7,8 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="app">
-        <tebal>Saya Sedang Belajar Vue.JS</tebal>
+    <div id="app">
+        <ul>
+            <daftar
+                v-for="item in daftarSiswa"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+            </daftar>
+        </ul>
     </div>
     <script src="vue.js"></script>
     <script src="app.js"></script>
