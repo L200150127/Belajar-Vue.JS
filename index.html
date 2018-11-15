@@ -5,27 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Belajar Vue.JS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
-        <ul>
-            <daftar
-                v-for="item in daftarSiswa"
-                v-bind:todo="item"
-                v-bind:key="item.id">
-            </daftar>
-        </ul>
-    </div>
-    <div id="blog-posts-events-demo">
-        <div :style="{ fontSize: postFontSize + 'em' }">
+    <div id="app" class="container mt-3">
+        <!-- <div :style="{ fontSize: postFontSize + 'em' }" class="jumbotron">
             <blog-post 
             v-for="post in posts" 
             v-bind:key="post.id" 
             v-bind:post="post"
             v-on:enlarge-text="postFontSize += 0.1">
             </blog-post>
+        </div> -->
+        <div class="card-deck">
+            <card title="Silver Blood" subtitle="Bleeding the Earth"
+            body="Silver Blood is the Strongest Power Human in History."></card>
+            <card title="Leon Esther" subtitle="Move Satelite"
+            body="Leon Esther is the one that choose to take down the Revolta."></card>
+            <card title="Gazelle" subtitle="Reaperose the Nightmare"
+            body="Gazelle is one of Toughest Opponent."></card>
         </div>
+        <modal title="Hapus" close="Batal"
+        save="Kirim" idc="Ok">
+            <p>Ini Adalah Modal Saya</p>
+            <p>Modal Saya dibuat dari Vue</p>
+        </modal>
+        <button class="btn btn-primary mt-3" data-target="#exampleModalCenter"
+        data-toggle="modal">
+            Tampilkan</button>
+        <hr>
+        <tabs>
+            <tab name="Home" :selected="true">
+                <h1>Ini Beranda Kami</h1>
+            </tab>
+            <tab name="About Us">
+                <h1>Ini Tentang kami pada tab About US</h1>
+            </tab>
+            <tab name="About Our Vision">
+                <h1>Ini Visi Kami pada tab Our Vision</h1>
+            </tab>
+            <tab name="About Our Culture">
+                <h1>Ini Kedisiplinan Kami pada tab Our Culture</h1>
+            </tab>
+        </tabs>
     </div>
+    <hr>
+    <div id="root" class="text-center">
+        <h3 class="pl-3">Daftar Tugas</h3>
+        <task-list class="pl-3 ml-3"></task-list>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="vue.js"></script>
     <script src="app.js"></script>
 </body>
